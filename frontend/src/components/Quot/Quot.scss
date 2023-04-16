@@ -1,0 +1,78 @@
+@import "../vars";
+%margin-padding {
+  margin: 3% 0 0 0;
+  padding: 0;
+}
+
+.quot {
+  width: 25%;
+  min-height: 250px;
+  border: 1px solid black;
+  border-radius: 10px;
+  @include font("Poppins", 25px, 164.02%);
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  position: relative;
+
+  @media screen and (max-width: $base-width2400) {
+    @include font("Poppins", 18px, 124.02%);
+  }
+
+  @media screen and (max-width: $base-width1152) {
+    width: 30%;
+  }
+
+  @media screen and (max-width: $base-width960) {
+    @include font("Poppins", 16px, 124.02%);
+  }
+
+  @media screen and (max-width: $base-width860) {
+    @include font("Proza_Libre", 18px, 124.02%);
+    width: 85%;
+    min-height: 30%;
+  }
+
+  @media screen and (max-width: $base-width768) {
+    @include font("Proza_Libre", 16px, 124.02%);
+  }
+
+  @media screen and (max-width: $base-width320) {
+    width: 85%;
+    min-height: 13vh;
+    @include font("Proza_Libre", 12px, 124.02%);
+  }
+
+  &__container {
+    min-height: 250px;
+    border-radius: 10px;
+    min-width: 100%;
+    margin: -10px 0 0 10px;
+    background-color: rgba(232,248,230, 0.6);
+    position: absolute;
+
+    @media screen and (max-width: $base-width860) {
+      min-height: 9vh;
+    }
+
+    @media screen and (max-width: $base-width620) {
+      min-height: 10vh;
+    }
+
+    @media screen and (max-width: $base-width320) {
+      min-height: 9vh;
+      max-height: 13vh;
+    }
+
+  }
+
+  &__title {
+    margin-right: 15px;
+    text-decoration: underline;
+  }
+
+  &__text {
+    margin: 15px 15px 15px 0;
+    border-radius: 10px;
+  }
+}

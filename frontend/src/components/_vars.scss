@@ -1,0 +1,127 @@
+@import '../vendor/fonts/fonts.scss';
+
+@mixin font($font-family, $size, $height) {
+    font-family: $font-family;
+    font-size: $size;
+    font-weight: 400;
+    line-height: $height;
+}
+
+@mixin flex($flex-direction, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+$base-width3088: 3088px;
+$base-width2400: 2400px;
+$base-width1920: 1920px;
+$base-width1560: 1560px;
+$base-width1440: 1440px;
+$base-width1350: 1350px;
+$base-width1334: 1335px;
+$base-width1280: 1280px;
+$base-width1152: 1152px;
+$base-width1080: 1080px;
+$base-width1024: 1024px;
+$base-width960: 960px;
+$base-width860: 860px;
+$base-width768: 768px;
+$base-width620: 620px;
+$base-width540: 540px;
+$base-width486: 486px;
+$base-width384: 384px;
+$base-width320: 320px;
+
+:root {
+    --quantityQuotText: 120;
+    --quantityQuotTitle: 50;
+    --quantityWorkPreviewText: 2300;
+
+    @media screen and (max-width: $base-width1920) {
+        --quantityQuotText: 200;
+        --quantityQuotTitle: 45;
+        --quantityWorkPreviewText: 1800;
+    }
+
+    @media screen and (max-width: $base-width1560) {
+        --quantityQuotText: 120;
+        --quantityQuotTitle: 50;
+        --quantityWorkPreviewText: 800;
+    }
+
+    @media screen and (max-width: $base-width1440) {
+        --quantityQuotText: 120;
+        --quantityQuotTitle: 50;
+        --quantityWorkPreviewText: 1300;
+    }
+
+    @media screen and (max-width: $base-width1334) {
+        --quantityWorkPreviewText: 700;
+    }
+
+    @media screen and (max-width: $base-width1280) {
+        --quantityQuotText: 90;
+        --quantityQuotTitle: 50;
+        --quantityWorkPreviewText: 2400;
+    }
+
+    @media screen and (max-width: $base-width1152) {
+        --quantityQuotText: 110;
+        --quantityQuotTitle: 50;
+        --quantityWorkPreviewText: 2100;
+    }
+
+    @media screen and (max-width: $base-width1024) {
+        --quantityQuotText: 90;
+        --quantityQuotTitle: 40;
+        --quantityWorkPreviewText: 1800;
+    }
+
+    @media screen and (max-width: $base-width960) {
+        --quantityQuotText: 120;
+        --quantityQuotTitle: 40;
+        --quantityWorkPreviewText: 1700;
+    }
+
+    @media screen and (max-width: $base-width860) {
+        --quantityQuotText: 50;
+        --quantityQuotTitle: 30;
+        --quantityWorkPreviewText: 1100;
+    }
+
+    @media screen and (max-width: $base-width768) {
+        --quantityQuotText: 50;
+        --quantityQuotTitle: 30;
+        --quantityWorkPreviewText: 900;
+    }
+
+    @media screen and (max-width: $base-width620) {
+        --quantityQuotText: 120;
+        --quantityQuotTitle: 40;
+        --quantityWorkPreviewText: 1600;
+    }
+
+    @media screen and (max-width: $base-width540) {
+        --quantityQuotText: 100;
+        --quantityQuotTitle: 25;
+        --quantityWorkPreviewText: 1200;
+    }
+
+    @media screen and (max-width: $base-width486) {
+        --quantityWorkPreviewText: 1000;
+    }
+
+    @media screen and (max-width: $base-width384) {
+        --quantityQuotText: 70;
+        --quantityQuotTitle: 20;
+        --quantityWorkPreviewText: 800;
+    }
+
+    @media screen and (max-width: $base-width320) {
+        --quantityQuotText: 80;
+        --quantityQuotTitle: 30;
+        --quantityWorkPreviewText: 1300;
+    }
+}
