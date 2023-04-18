@@ -1,0 +1,55 @@
+version: '3.3'
+services:
+
+  db:
+    container_name: db_samgtu
+    image: postgres:13-alpine
+    volumes:
+      - postgres:/var/lib/postgresql/data/samgtu
+    env_file:
+      - ./.env
+
+  backend:
+#    image: maksimovvs/infra-backend # remove image
+    container_name: back
+    build: ../backend # local image
+    restart: always
+    volumes:
+      - static_value:/app/static/
+      - media_value:/app/media/
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file:
+      - ./.env
+
+  frontend:
+#    image: maksimovvs/infra-frontend
+    container_name: front
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ../frontend/:/app/result_build/
+
+#  nginx:
+#    container_name: nginx
+#    image: nginx:1.19.3
+#    restart: always
+#    ports:
+#      - "80:80"
+#    volumes:
+#      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+#      - ../frontend/build:/usr/share/nginx/html/
+#      - ../docs/:/usr/share/nginx/html/api/docs/
+#      - static_value:/var/html/static/
+#      - media_value:/var/html/media/
+#    depends_on:
+#      - frontend
+#      - backend
+
+volumes:
+  static_value:
+  media_value:
+  postgres:
